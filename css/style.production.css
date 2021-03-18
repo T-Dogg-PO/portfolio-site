@@ -188,6 +188,31 @@ a:active {
     border-radius: 50%;
 }
 
+/* Styling the form on contact.html */
+#contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#contact-form .standard-label {
+    padding-bottom: 5px;
+}
+
+#contact-form input {
+    margin-bottom: 10px;
+}
+
+#contact-form textarea {
+    margin-bottom: 20px;
+}
+
 button {
     /* Overwrite browser defaults, resets border */
     border: none;
