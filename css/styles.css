@@ -1,0 +1,325 @@
+/* 
+I am using a colour theme generated from https://www.w3schools.com/w3css/w3css_color_generator.asp - specifically their '2018 Little Boy Blue' theme
+
+From lighter to darker colours:
+#f6f9fd - background colour
+#e2ecf7 
+#c5d8ef 
+#a9c5e7 
+#8cb1df 
+#6f9fd8 - middle colour
+#558dd1 
+#3c7bc9 
+#316cb3 - Links / navigation
+#2a5c9a 
+#234d80 
+
+#0471A6 - used for a slightly better scoring active link colour (regarding contrast)
+*/
+
+/* CSS variables, available to all elements through the root pseudo-class */
+:root {
+    /* Defining colours used throughout the site */
+    --default-link-color: #316cb3;
+    --active-link-color: #0471A6;
+    --visited-link-color: #234d80;
+
+    --button-color: #234d80;
+    --button-border-bottom-color: rgba(0, 0, 0, 0.3);
+
+    --page-header-border-bottom-color: #c5d8ef;
+
+    --wave-color: #7FFFD4;
+    --water-color: #00BFFF;
+
+    --light-grey: #d3d3d3;
+    --white: #FFFFFF;
+
+    /* Defining font weights and sizes */
+    --default-font-weight: 400;
+    --default-font-size: 16px;
+    --default-line-height: 1.6;
+    
+    --heading-font-weight: 700;
+    --h1-font-size: 30px;
+    --h2-font-size: 24px;
+    --h3-font-size: 18px;
+}
+
+/* Force all HTML elements to include padding + border in size calculations */
+* {
+    box-sizing: border-box;
+}
+
+/* Define the font sizes and line heights for default text elements (at least the ones in use at the moment) */
+body {
+    font-family: 'Shippori Mincho', sans-serif;
+    font-weight: var(--default-font-weight);
+    font-size: var(--default-font-size);
+    line-height: var(--default-line-height);
+}
+
+/* Header (nav bar) formatting, making it a Flexbox to change size with browser window */
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px groove var(--page-header-border-bottom-color);
+}
+
+/* Each item in the heading (logo + navigation links) has base width of 200px, is able to shrink but not able to grow */
+.page-header__item {
+    flex: 0 1 200px;
+}
+
+/* Fix the height of the logo on each page so that when viewing on smaller screens the logo doesn't get stretched */
+.page-header__logo {
+    position: relative;
+    height: 100%;
+}
+
+/* Target only the navigation headings, allow them to grow to take up the remaining space on the screen and right-align them */
+.page-header__item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+/* Remove bullet points from navigation list */
+.navigation-list {
+    list-style-type: none;
+}
+
+/* inline-block means that the navigation items appear on the same line */
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--heading-font-weight);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: var(--heading-font-weight);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: var(--heading-font-weight);
+}
+
+/* Define colour scheme for links, including default, visited, hovering and active links */
+a {
+    color: var(--default-link-color);
+    text-decoration: none;
+}
+
+a:visited {
+    /* Changes the colour of the link when it's been visited */
+    color: var(--visited-link-color);
+}
+
+a:active {
+    /* Changes the colour of the link when it's selected */
+    color: var(--active-link-color);
+}
+
+/* Changes the colour of the tab that the user is currently on. Also overriding the :visited pseudo-class for the .navigation-list__item--active class */
+.navigation-list__item--active, .navigation-list__item--active:visited {
+    color: var(--active-link-color);
+    text-decoration: none;
+}
+
+/* Adding link animation for hovering over a link. Based on this CodePen (specifically topBottomBordersIn) - https://codepen.io/EvyatarDa/pen/waKXMd */
+.navigation-list__item::before, .navigation-list__item::after {
+    /* position: relative; */
+    display: block;
+    height: 2px;
+    background: var(--visited-link-color);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.navigation-list__item::before {
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+.navigation-list__item::after {
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+.navigation-list__item:hover::before, .navigation-list__item:hover::after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/* Sets dimensions for entire profile section. The margin property centers the profile horizontally */
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Sets profile picture dimensions, and makes it float to left of profile text */
+.profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+button, .button {
+    /* Overwrite browser defaults, resets border */
+    border: none;
+    display: inline-block;
+    /* Inherit font from parent element */
+    font-family: inherit;
+    /* Set background colour */
+    background-color: var(--button-color);
+    /* Set text colour */
+    color: var(--white);
+    /* Set no text decoration */
+    text-decoration: none;
+    /* Give the button some dimensions */
+    padding: 10px;
+    border-radius: 3px;
+    /* Give the button a small bottom border for a slight 3-d effect */
+    border-bottom: 2px solid var(--button-border-bottom-color);
+    /* Give the button a transition (format is transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
+    transition: 0.2s opacity;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    /* Changes cursor to a hand while hovering over button */
+    cursor: pointer;
+    /* Reduce opacity when hovering over button */
+    opacity: 0.8;
+}
+
+/* Adding formatting for image on about.html */
+.about-image {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+.about-image__caption {
+    display: block;
+}
+
+/* Grid fallback */
+.grid__item {
+    display: inline-block;
+    width: 33%;
+}
+/* End grid fallback */
+
+/* Sets up grid display for browsers that support this feature */
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        /* Sets up 3 columns of equal size */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* Creates gaps between the grid elements */
+        grid-gap: 20px;
+        margin: 0;
+    }
+
+    /* Sets up individual grid items / boxes */
+    .grid__item {
+        background-color: var(--light-grey);
+        /* width: auto - sets width to be determined by grid container */
+        width: auto;
+        min-height: auto;
+        margin: 0;
+    }
+
+    .grid__item:last-child {
+        grid-column: 3 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+/* Format the page footer (where links to social media go) */
+.page-footer {
+    /* clear: both - does not allow floating elements on either side of the element */
+    clear: both;
+    /* Make footer a flexbox too */
+    display: flex;
+    /* Makes the text appear above the icons for the social media sited */
+    flex-direction: column;
+    /* Centers the text in the page */
+    text-align: center;
+}
+
+/* Media query to change layout for small screens.
+'all' specifies that it is applied to all media (screen, print and speech). max-width defines screen size that these rules are applied to */
+@media all and (max-width: 750px) {
+    /* Smaller gap between grid items */
+    .grid {
+        grid-gap: 10px;
+    }
+
+    /* Returns the final grid item to the original grid formatting (rather than taking up more space as defined above) */
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+
+    /* Reduce heading to smaller size */
+    h1 {
+        font-size: 22px;
+    }
+
+    /* Increase the vertical padding of each nav item to prevent them overlapping each other */
+    .navigation-list__item {
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+}
+
+/* Specific media query for screens less than 500px wide. Only change is the grid columns in work.html going down to 1. Everything else will be the same as the media query above */
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile__portrait {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/* Specific media query for screens between 500px to 750px wide. Only change is the grid columns going down to 2. Everything else will be the same as the media query above */
+@media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Animation for wave in SVG image on about.html */
+@keyframes wave-grow-shrink {
+    from {
+        transform: translate(0px, 0px);
+        fill: var(--white);
+    }
+    to {
+        transform: translate(0px, 20px);
+        fill: var(--wave-color);
+    }
+}
+
+/* Applying animation to wave in image */
+.wave {
+    animation: 1s wave-grow-shrink infinite alternate linear;
+}
+
+/* Changing the water colour in the default SVG to something more visible */
+.water {
+    fill: var(--water-color);
+}

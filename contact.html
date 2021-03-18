@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Setting the viewport based on the users device. width=device-width sets the width of the html file to match the screen-width, initial-scale=1 sets the initial zoom level when page is loaded by browser -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Thomas Tremlett's Portfolio</title>
+        <link rel="shortcut icon" href="img/favicon/favicon-32x32.png">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Font from Google Fonts - https://fonts.google.com/specimen/Shippori+Mincho?preview.text_type=custom -->
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    </head>
+
+    <body>
+        <!-- Navigation bar in header of page, same for each page across site -->
+        <header class="page-header">
+            <!-- Add logo here when ready -->
+            <img src="img/logo.png" alt="Logo for Thomas Tremlett, his name in blue letters" class="page-header__item page-header__logo">
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item">HOME</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item">ABOUT ME</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">WORK</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Section for my contact information -->
+        <section class="profile">
+            <h1>Contact</h1>
+            <div>
+                Address goes here
+                <br>
+                Telephone: <br>
+                Skype: <br>
+                Email: <br>
+                <br>
+                <a href="#">Contact me</a>
+            </div>
+        </section>
+
+        <!-- Contact form -->
+        <form action="" method="post" id="contact-form">
+            <label class="standard-label" for="contact-name">Name: </label>
+            <input type="text" id="contact-name" required>
+
+            <label class="standard-label" for="contact-email">Email: </label>
+            <input type="email" id="contact-email" required>
+
+            <label class="standard-label" for="contact-telephone">Telephone: </label>
+            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+
+            <label class="standard-label" for="contact-message">Message: </label>
+            <textarea maxlength="240" id="contact-message" required></textarea>
+
+            <input type="submit" value="Send message">
+        </form>
+
+        <!-- Links to connect on various social media accounts, same for each page across site -->
+        <footer class="page-footer">
+            <p>Connect with me on</p>
+            <div class="social-media">
+                <a href="https://github.com/T-Dogg-PO"><img src="img/github.svg" alt="Link to Thomas Tremlett's Github account"></a>
+                <a href="https://www.linkedin.com/in/thomas-tremlett"><img src="img/linkedin.svg" alt="Link to Thomas Tremlett's LinkedIn account"></a>
+                <img src="img/twitter.svg" alt="Link to Thomas Tremlett's Twitter account">
+            </div>
+        </footer>
+
+        <script src="js/tota11y.min.js"></script>
+    </body>
+</html>
