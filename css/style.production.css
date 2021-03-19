@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
-* Browsers: last 4 version
+* Browsers: last 2 version
 */
 
 /*
@@ -123,7 +123,6 @@ a:active {
     color: #0471a6;
     text-decoration: none;
 }
-
 .navigation-list__item--active:visited {
     color: #0471a6;
     text-decoration: none;
@@ -138,10 +137,8 @@ a:active {
     content: "";
     opacity: 0;
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-
 .navigation-list__item::after {
     /* position: relative; */
     display: block;
@@ -150,21 +147,18 @@ a:active {
     content: "";
     opacity: 0;
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .navigation-list__item::before {
     top: 0;
     -webkit-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
             transform: translateY(-10px);
 }
 
 .navigation-list__item::after {
     bottom: 0;
     -webkit-transform: translateY(10px);
-        -ms-transform: translateY(10px);
             transform: translateY(10px);
 }
 
@@ -172,7 +166,6 @@ a:active {
 .navigation-list__item:hover::after {
     opacity: 1;
     -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
             transform: translateY(0);
 }
 
@@ -215,6 +208,26 @@ a:active {
     margin-bottom: 20px;
 }
 
+/* Formatting parent container for buttons for the form */
+.parent-button-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+}
+
+/* Formatting parent container for button on about.html */
+.parent-button-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
 button {
     /* Overwrite browser defaults, resets border */
     border: none;
@@ -241,7 +254,6 @@ button {
 
     /* Give the button a transition (format is transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
     -webkit-transition: 0.2s opacity;
-    -o-transition: 0.2s opacity;
     transition: 0.2s opacity;
 }
 
@@ -271,7 +283,6 @@ button {
 
     /* Give the button a transition (format is transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay] */
     -webkit-transition: 0.2s opacity;
-    -o-transition: 0.2s opacity;
     transition: 0.2s opacity;
 }
 
@@ -286,11 +297,16 @@ button:focus,
     opacity: 0.8;
 }
 
+/* Added outside div for image on about.html to center it */
+.parent-image-center {
+    text-align: center;
+}
+
 /* Adding formatting for image on about.html */
 .about-image {
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-image__caption {
@@ -420,7 +436,6 @@ button:focus,
         fill: #7fffd4;
     }
 }
-
 @keyframes wave-grow-shrink {
     from {
         -webkit-transform: translate(0, 0);

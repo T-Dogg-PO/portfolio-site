@@ -190,6 +190,18 @@ a:active {
     margin-bottom: 20px;
 }
 
+/* Formatting parent container for buttons for the form */
+.parent-button-left {
+    display: flex;
+    justify-content: left;
+}
+
+/* Formatting parent container for button on about.html */
+.parent-button-center {
+    display: flex;
+    justify-content: center;
+}
+
 button,
 .button {
     /* Overwrite browser defaults, resets border */
@@ -230,11 +242,16 @@ button:focus,
     opacity: 0.8;
 }
 
+/* Added outside div for image on about.html to center it */
+.parent-image-center {
+    text-align: center;
+}
+
 /* Adding formatting for image on about.html */
 .about-image {
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-image__caption {
