@@ -324,6 +324,9 @@ button:focus,
     width: 33%;
     background-color: #d3d3d3;
     margin: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 /* End grid fallback */
@@ -351,6 +354,9 @@ button:focus,
         width: auto;
         min-height: auto;
         margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
     }
 
     .grid__item:last-child {
