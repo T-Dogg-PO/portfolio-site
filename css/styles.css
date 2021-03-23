@@ -268,7 +268,7 @@ button:focus,
     display: inline-block;
     width: 33%;
     background-color: #d3d3d3;
-    padding: 20px;
+    margin: 20px;
 }
 
 /* End grid fallback */
