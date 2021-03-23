@@ -64,7 +64,7 @@ body {
 
 /* Each item in the heading (logo + navigation links) has base width of 200px, is able to shrink but not able to grow */
 .page-header__item {
-    flex: 0 1 200px;
+    flex: 0 1 auto;
 }
 
 /* Fix the height of the logo on each page so that when viewing on smaller screens the logo doesn't get stretched */
@@ -336,8 +336,12 @@ button:focus,
     }
 }
 
-/* Specific media query for screens less than 500px wide. Only change is the grid columns in work.html going down to 1. Everything else will be the same as the media query above */
+/* Specific media query for screens less than 500px wide. Grid columns in work.html going down to 1. Changing header behaviour too */
 @media all and (max-width: 500px) {
+    .page-header {
+        display: block;
+    }
+
     .grid {
         grid-template-columns: 1fr;
     }
