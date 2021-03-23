@@ -58,8 +58,8 @@ body {
 /* Each item in the heading (logo + navigation links) has base width of 200px, is able to shrink but not able to grow */
 .page-header__item {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
 }
 
 /* Fix the height of the logo on each page so that when viewing on smaller screens the logo doesn't get stretched */
@@ -85,6 +85,11 @@ body {
 .navigation-list li {
     display: inline-block;
     margin-left: 15px;
+}
+
+/* Set padding for main sections, mainly for responsiveness */
+main {
+    padding: 10px;
 }
 
 h1 {
@@ -317,6 +322,7 @@ button:focus,
 .grid__item {
     display: inline-block;
     width: 33%;
+    background-color: #d3d3d3;
 }
 
 /* End grid fallback */
@@ -373,6 +379,9 @@ button:focus,
 
     /* Centers the text in the page */
     text-align: center;
+
+    /* Add padding to footer so when resized it's not against the edge of the page */
+    padding: 10px;
 }
 
 /* Media query to change layout for small screens.
@@ -401,8 +410,12 @@ button:focus,
     }
 }
 
-/* Specific media query for screens less than 500px wide. Only change is the grid columns in work.html going down to 1. Everything else will be the same as the media query above */
+/* Specific media query for screens less than 500px wide. Grid columns in work.html going down to 1. Changing header behaviour too */
 @media all and (max-width: 500px) {
+    .page-header {
+        display: block;
+    }
+
     .grid {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
