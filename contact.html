@@ -34,39 +34,41 @@
                 </ul>
             </nav>
         </header>
+        
+        <main>
+            <!-- Section for my contact information -->
+            <section class="profile">
+                <h1>Contact</h1>
+                <div>
+                    Address goes here
+                    <br>
+                    Telephone: <br>
+                    Skype: <br>
+                    Email: <br>
+                    <br>
+                    <a href="#">Contact me</a>
+                </div>
+            </section>
 
-        <!-- Section for my contact information -->
-        <section class="profile">
-            <h1>Contact</h1>
-            <div>
-                Address goes here
-                <br>
-                Telephone: <br>
-                Skype: <br>
-                Email: <br>
-                <br>
-                <a href="#">Contact me</a>
-            </div>
-        </section>
+            <!-- Contact form -->
+            <form action="#" method="post" id="contact-form">
+                <label class="standard-label" for="contact-name">Name: </label>
+                <input type="text" id="contact-name" required>
 
-        <!-- Contact form -->
-        <form action="#" method="post" id="contact-form">
-            <label class="standard-label" for="contact-name">Name: </label>
-            <input type="text" id="contact-name" required>
+                <label class="standard-label" for="contact-email">Email: </label>
+                <input type="email" id="contact-email" required>
 
-            <label class="standard-label" for="contact-email">Email: </label>
-            <input type="email" id="contact-email" required>
+                <label class="standard-label" for="contact-telephone">Telephone: </label>
+                <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
 
-            <label class="standard-label" for="contact-telephone">Telephone: </label>
-            <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea maxlength="240" id="contact-message" required></textarea>
 
-            <label class="standard-label" for="contact-message">Message: </label>
-            <textarea maxlength="240" id="contact-message" required></textarea>
-
-            <div class="parent-button-left">
-                <button type="submit" value="Send message">Send message</button>
-            </div>
-        </form>
+                <div class="parent-button-left">
+                    <button type="submit" value="Send message">Send message</button>
+                </div>
+            </form>
+        </main>
 
         <!-- Links to connect on various social media accounts, same for each page across site -->
         <footer class="page-footer">

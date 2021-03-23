@@ -90,6 +90,11 @@ body {
     margin-left: 15px;
 }
 
+/* Set padding for main sections, mainly for responsiveness */
+main {
+    padding: 10px;
+}
+
 h1 {
     font-size: var(--h1-font-size);
     font-weight: var(--heading-font-weight);
