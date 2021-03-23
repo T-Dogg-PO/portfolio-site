@@ -267,6 +267,7 @@ button:focus,
 .grid__item {
     display: inline-block;
     width: 33%;
+    background-color: #d3d3d3;
 }
 
 /* End grid fallback */
