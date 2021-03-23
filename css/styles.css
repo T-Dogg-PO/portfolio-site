@@ -313,9 +313,6 @@ button:focus,
 
     /* Centers the text in the page */
     text-align: center;
-
-    /* Add padding to footer so when resized it's not against the edge of the page */
-    padding: 10px;
 }
 
 /* Media query to change layout for small screens.
