@@ -131,6 +131,7 @@ a:active {
 .navigation-list__item--active:visited {
     color: var(--active-link-color);
     text-decoration: none;
+    font-weight: 700;
 }
 
 /* Adding link animation for hovering over a link. Based on this CodePen (specifically topBottomBordersIn) - https://codepen.io/EvyatarDa/pen/waKXMd */
