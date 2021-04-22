@@ -192,6 +192,18 @@ a:active {
     margin-bottom: 10px;
 }
 
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.error-message {
+    color: #FF0000;
+}
+
 #contact-form textarea {
     margin-bottom: 20px;
 }
