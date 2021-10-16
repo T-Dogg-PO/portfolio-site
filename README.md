@@ -1,5 +1,5 @@
 # Portfolio Website - A site designed to show off my programming projects.
-<img src="img/portfolio.png" style="max-width: 100%;">
+<img src="./img/portfolio.png" width="200px">
 
 ## Purpose
 The purpose of this website is to:
