@@ -40,18 +40,17 @@
             <section class="profile">
                 <h1>Contact</h1>
                 <div>
-                    Address goes here
+                    Currently located in Luxembourg
                     <br>
-                    Telephone: <br>
-                    Skype: <br>
-                    Email: <br>
+                    Telephone: +49 157 3107 9795<br>
+                    Email: TEDTremlett@gmail.com<br>
                     <br>
                     <a href="#">Contact me</a>
                 </div>
             </section>
 
             <!-- Contact form -->
-            <form action="#" method="post" id="contact-form">
+            <form action="#" onsubmit="return false" method="post" id="contact-form">
                 <label class="standard-label" for="contact-name">Name: </label>
                 <input type="text" id="contact-name" required>
 
@@ -67,7 +66,7 @@
                 <textarea maxlength="240" id="contact-message" required></textarea>
 
                 <div class="parent-button-left">
-                    <button type="submit" value="Send message">Send message</button>
+                    <button type="submit" onClick="sendContact();">Send message</button>
                 </div>
             </form>
         </main>
