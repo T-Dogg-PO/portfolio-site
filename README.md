@@ -1,4 +1,5 @@
 # Portfolio Website - A site designed to show off my programming projects.
+![Alt text](/img/portfolio.png?raw=true "Screenshot of Portfolio Site")
 
 ## Purpose
 The purpose of this website is to:
