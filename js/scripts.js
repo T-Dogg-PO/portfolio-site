@@ -44,3 +44,24 @@ function validateEmail() {
 
 // Add event listener for inputs into the emailInput field, and call validateEmail
 emailInput.addEventListener('input', validateEmail);
+
+// Email JS integration - https://www.emailjs.com/docs/tutorial/creating-contact-form/
+(function() {
+    // https://dashboard.emailjs.com/admin/integration
+    emailjs.init('user_V7Q1ny4u6BehHxl4WQtIz');
+})();
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('service_0lbikba', 'template_2zxgal8', this)
+            .then(function() {
+                alert('Email sent successfully!');
+            }, function(error) {
+                alert('Error...', error);
+            });
+    });
+}
