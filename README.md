@@ -10,6 +10,7 @@ The purpose of this website is to:
 * HTML
 * CSS
 * JavaScript
+* Tota11y - an accessibility developer tool
 
 ## Link to live site
 * Hosted through Github Pages - https://t-dogg-po.github.io/portfolio-site/
