@@ -37,6 +37,10 @@ From lighter to darker colours:
             box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Define the font sizes and line heights for default text elements (at least the ones in use at the moment) */
 body {
     font-family: 'Shippori Mincho', sans-serif;
@@ -53,6 +57,9 @@ body {
     width: 100%;
     padding: 20px;
     border-bottom: 1px groove #c5d8ef;
+    background-color: white;
+    position: sticky;
+    top: 0;
 }
 
 /* Each item in the heading (logo + navigation links) has base width of 200px, is able to shrink but not able to grow */
@@ -90,11 +97,20 @@ body {
 /* Set padding for main sections, mainly for responsiveness */
 main {
     padding: 10px;
+    display: flow-root;
+}
+
+hr {
+    opacity: 0.3;
 }
 
 h1 {
     font-size: 30px;
     font-weight: 700;
+}
+
+.centered {
+    text-align: center;
 }
 
 h2 {
@@ -376,14 +392,6 @@ button:focus,
         padding-right: 10px;
         padding-bottom: 10px;
     }
-
-    .grid__item:last-child {
-        -ms-grid-column: 3;
-        grid-column: 3 / 3;
-        -ms-grid-row: 1;
-        -ms-grid-row-span: 2;
-        grid-row: 1 / 3;
-    }
 }
 
 .app-preview-image {
@@ -459,6 +467,21 @@ button:focus,
         float: none;
         display: inline-block;
     }
+}
+
+#index-about {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#index-work {
+    padding: 10px;
+    display: flow-root;
+}
+
+#index-contact {
+    padding: 10px;
+    display: flow-root;
 }
 
 /* Specific media query for screens between 500px to 750px wide. Only change is the grid columns going down to 2. Everything else will be the same as the media query above */

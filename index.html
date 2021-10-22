@@ -42,16 +42,157 @@
             <p>
                 My name is Thomas Tremlett. I am a <span>web</span> developer from New Zealand, currently living in Luxembourg.
             </p>
-            <a href="https://github.com/T-Dogg-PO">Check out my portfolio of projects!</a>
         </main>
+        <div class="centered">
+            <a href="#index-about">Learn more about me</a><br><br>
+            <a href="#index-work">Check out my portfolio!</a><br><br>
+            <a href="#index-contact">My Contact Details</a><br><br>
+        </div>
+        <hr>
+
+        <div class="index-details-section" id="index-about">
+            <h1 class="centered">About Thomas Tremlett</h1>
+            <p>I am a web developer originally from New Zealand, but currently living in Luxembourg.<br><br>
+                Although I started off my career with a Masters Degree in Materials Engineering, I had the opportunity to stumble into the IT industry while working in Vancouver, Canada. Here I fell in love with web development and choose to make the career switch. Through a combination of my own self-taught learning and the CareerFoundry Full Stack Web Development course, I'm now looking for my first developer positon!<br><br>
+                With almost two years of experience working in Customer Support, I understand the importance of customer obsessed development. It's my belief that my role as a developer is to help enable a users success, and I attempt to bring that philosophy to my coding every day.<br><br>
+                I am most familiar with the <b>MERN</b> stack (<b>MongoDB, Express, React, Node</b>), but I also have experience with <b>Angular, TypeScript</b> and <b>Python</b> (particularly the <b>Django</b> framework).<br><br>
+                When I'm not coding or travelling, I spend my free time swimming (long distance open water) or gaming (Age of Empires 2 and Baldur's Gate).
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="index-details-section" id="index-work">
+            <h1 class="centered">My Portfolio</h1>
+            <div class="grid">
+                <div class="grid__item">
+                    <h2>Pokedex App</h2>
+                    <img src="img/pokedex.PNG" alt="Screenshot showing part of the Pokedex App" class="app-preview-image">
+                    <p>A site that makes use of the <a href="https://pokeapi.co/">PokeAPI</a> to display Pokemon information. This website was built primarily with vanilla JavaScript, along with some JQuery.</p>
+                    <b>Technologies Used:</b><br>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>JQuery</li>
+                        <li>Bootstrap</li>
+                    </ul> 
+                    <a href="https://github.com/T-Dogg-PO/pokedex">See this project on Github!</a><br><br>
+                    <a href="https://t-dogg-po.github.io/pokedex/">Live Demo</a>
+                </div>
+                <div class="grid__item">
+                    <h2>Movie Database API</h2>
+                    <p>The backend portion of my movie database website. The movie database site has been built with the MERN stack, so this part is primarily Node.js. It will be used by the React-based frontend (see the Movie Client project for more details).</p>
+                    <b>Technologies Used:</b><br>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>MongoDB</li>
+                        <li>Mongoose</li>
+                    </ul> 
+                    <a href="https://github.com/T-Dogg-PO/movie_api">See this project on Github!</a><br><br>
+                    <a href="https://t-dogg-movies-api.herokuapp.com/documentation.html">Documentation for how to use this API can be found here.</a>
+                </div>
+                <div class="grid__item">
+                    <h2>Movie Database React Client</h2>
+                    <img src="img/myflix-react.PNG" alt="Screenshot showing part of the myFlix app built with React" class="app-preview-image">
+                    <p>The frontend portion of my movie database website. The frontend was built primarily with React and Redux to display movie information provided by the Movie API project.</p>
+                    <b>Technologies Used:</b><br>
+                    <ul>
+                        <li>React</li>
+                        <li>Redux</li>
+                        <li>React Bootstrap</li>
+                    </ul> 
+                    <a href="https://github.com/T-Dogg-PO/myFlix-client">See this project on Github!</a><br><br>
+                    <a href="https://t-dogg-myflix-react.netlify.app">Live Demo</a>
+                </div>
+                <div class="grid__item">
+                    <h2>Meet App</h2>
+                    <img src="img/meet.PNG" alt="Screenshot showing part of the Meet App" class="app-preview-image">
+                    <p>A site that displays information from the CareerFoundry Google Calendar for upcoming developer-related events. It has been developed using Test-Driven Development practices, making use of technologies such as Jest, Puppeteer and AWS Lambda. The site was primarily written in React.</p>
+                    <b>Technologies Used:</b><br>
+                    <ul>
+                        <li>React</li>
+                        <li>AWS Lambda</li>
+                        <li>Jest</li>
+                        <li>Puppeteer</li>
+                    </ul> 
+                    <a href="https://github.com/T-Dogg-PO/meet">See this project on Github!</a><br><br>
+                    <a href="https://t-dogg-po.github.io/meet/">Live Demo</a>
+                </div>
+                <div class="grid__item">
+                    <h2>Chat App</h2>
+                    <img src="img/chat.png" alt="Screenshot showing part of the Chat App" class="app-preview-image">
+                    <p>An app used to experiment building mobile apps with React Native. This app will allow users to send text messages or images from their device storage/camera.</p>
+                    <b>Technologies Used:</b><br>
+                    <ul>
+                        <li>React-Native</li>
+                        <li>Gifted Chat</li>
+                        <li>Expo</li>
+                        <li>Firestore</li>
+                    </ul> 
+                    <a href="https://github.com/T-Dogg-PO/chat-app">See this project on Github!</a>
+                </div>
+                <div class="grid__item">
+                    <h2>Movie Database Angular Client</h2>
+                    <img src="img/myflix-angular.PNG" alt="Screenshot showing part of the myFlix app built with Angular" class="app-preview-image">
+                    <p>An alternaive take on the frontend portion of my movie database website. To get practice with a different JavaScript framework, this frontend was built using Angular, and interacts with the API from one of my previous projects.</p>
+                    <b>Technologies Used:</b><br>
+                    <ul>
+                        <li>Angular</li>
+                        <li>TypeScript</li>
+                        <li>Angular Material</li>
+                    </ul> 
+                    <a href="https://github.com/T-Dogg-PO/myFlix-Angular-client">See this project on Github!</a><br><br>
+                    <a href="https://t-dogg-po.github.io/myFlix-Angular-client/welcome">Live Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="index-details-section" id="index-contact">
+            <section class="profile">
+                <h1 class="centered">My Contact Details</h1>
+                <div>
+                    Currently located in Luxembourg
+                    <br>
+                    <b>Telephone:</b> +49 157 3107 9795<br>
+                    <b>Email:</b> TEDTremlett@gmail.com<br>
+                    <a href="https://medium.com/@tedtremlett">Check out my blog!</a><br>
+                    <br>
+                </div>
+            </section>
+
+            <!-- Contact form -->
+            <form id="contact-form">
+                <h3>Contact me</h3>
+                <input type="hidden" name="contact_number">
+                <label class="standard-label" for="contact-name">Name: </label>
+                <input class="single-line-text-input" type="text" id="contact-name" name="from_name" required>
+
+                <label class="standard-label" for="contact-email">Email: </label>
+                <div class="input-wrapper">
+                    <input class="single-line-text-input" type="email" name="user_email" id="contact-email" required>
+                </div>
+
+                <label class="standard-label" for="contact-telephone">Telephone (format 123-456-7890): </label>
+                <input class="single-line-text-input" type="tel" name="user_phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+
+                <label class="standard-label" for="contact-message">Message: </label>
+                <textarea maxlength="240" name="message" id="contact-message" required></textarea>
+
+                <div class="parent-button-left">
+                    <button type="submit" value="Send message">Send message</button>
+                </div>
+            </form>
+        </div>
 
         <!-- Links to connect on various social media accounts, same for each page across site -->
         <footer class="page-footer">
-            <p>Connect with me on</p>
+            <p><b>Connect with me on</b></p>
             <div class="social-media">
                 <a href="https://github.com/T-Dogg-PO"><img src="img/github.svg" alt="Link to Thomas Tremlett's Github account"></a>
                 <a href="https://www.linkedin.com/in/thomas-tremlett"><img src="img/linkedin.svg" alt="Link to Thomas Tremlett's LinkedIn account"></a>
-                <img src="img/twitter.svg" alt="Link to Thomas Tremlett's Twitter account">
+                <a href="https://twitter.com/tremlett_thomas"><img src="img/twitter.svg" alt="Link to Thomas Tremlett's Twitter account"></a>
             </div>
         </footer>
     </body>

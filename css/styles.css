@@ -46,6 +46,10 @@ From lighter to darker colours:
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Define the font sizes and line heights for default text elements (at least the ones in use at the moment) */
 body {
     font-family: 'Shippori Mincho', sans-serif;
@@ -60,6 +64,9 @@ body {
     width: 100%;
     padding: 20px;
     border-bottom: 1px groove var(--page-header-border-bottom-color);
+    background-color: white;
+    position: sticky;
+    top: 0;
 }
 
 /* Each item in the heading (logo + navigation links) has base width of 200px, is able to shrink but not able to grow */
@@ -93,11 +100,20 @@ body {
 /* Set padding for main sections, mainly for responsiveness */
 main {
     padding: 10px;
+    display: flow-root;
+}
+
+hr {
+    opacity: 0.3;
 }
 
 h1 {
     font-size: var(--h1-font-size);
     font-weight: var(--heading-font-weight);
+}
+
+.centered {
+    text-align: center;
 }
 
 h2 {
@@ -318,11 +334,6 @@ button:focus,
         padding-right: 10px;
         padding-bottom: 10px;
     }
-
-    .grid__item:last-child {
-        grid-column: 3 / 3;
-        grid-row: 1 / 3;
-    }
 }
 
 .app-preview-image {
@@ -350,6 +361,26 @@ button:focus,
 
     /* Add padding to footer so when resized it's not against the edge of the page */
     padding: 10px;
+}
+
+/* .index-details-section {
+    max-width: 700px;
+    margin: 0 auto;
+} */
+
+#index-about {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#index-work {
+    padding: 10px;
+    display: flow-root;
+}
+
+#index-contact {
+    padding: 10px;
+    display: flow-root;
 }
 
 /* Media query to change layout for small screens.
