@@ -54,15 +54,15 @@
                 <h3>Contact me</h3>
                 <input type="hidden" name="contact_number">
                 <label class="standard-label" for="contact-name">Name: </label>
-                <input type="text" id="contact-name" name="from_name" required>
+                <input class="single-line-text-input" type="text" id="contact-name" name="from_name" required>
 
                 <label class="standard-label" for="contact-email">Email: </label>
                 <div class="input-wrapper">
-                    <input type="email" name="user_email" id="contact-email" required>
+                    <input class="single-line-text-input" type="email" name="user_email" id="contact-email" required>
                 </div>
 
                 <label class="standard-label" for="contact-telephone">Telephone (format 123-456-7890): </label>
-                <input type="tel" name="user_phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
+                <input class="single-line-text-input" type="tel" name="user_phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone">
 
                 <label class="standard-label" for="contact-message">Message: </label>
                 <textarea maxlength="240" name="message" id="contact-message" required></textarea>
