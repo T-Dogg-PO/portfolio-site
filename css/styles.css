@@ -349,6 +349,11 @@ button:focus,
     text-align: center;
 }
 
+.showHideButton {
+    font-size: 13px;
+    padding: 5px;
+}
+
 /* Format the page footer (where links to social media go) */
 .page-footer {
     /* clear: both - does not allow floating elements on either side of the element */
@@ -366,11 +371,6 @@ button:focus,
     /* Add padding to footer so when resized it's not against the edge of the page */
     padding: 10px;
 }
-
-/* .index-details-section {
-    max-width: 700px;
-    margin: 0 auto;
-} */
 
 #index-about {
     max-width: 700px;

@@ -407,6 +407,11 @@ button:focus,
     text-align: center;
 }
 
+.showHideButton {
+    font-size: 13px;
+    padding: 5px;
+}
+
 /* Format the page footer (where links to social media go) */
 .page-footer {
     /* clear: both - does not allow floating elements on either side of the element */
