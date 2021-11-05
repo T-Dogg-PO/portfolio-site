@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Setting the viewport based on the users device. width=device-width sets the width of the html file to match the screen-width, initial-scale=1 sets the initial zoom level when page is loaded by browser -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Case Study for myFlix</title>
+        <link rel="shortcut icon" href="img//favicon/favicon-32x32.png">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!-- Font from Google Fonts - https://fonts.google.com/specimen/Shippori+Mincho?preview.text_type=custom -->
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    </head>
+
+    <body>
+        <!-- Navigation bar in header of page, same for each page across site -->
+        <header class="page-header">
+            <!-- Add logo here when ready -->
+            <img src="img/logo.png" alt="Logo for Thomas Tremlett, his name in blue letters" class="page-header__item page-header__logo">
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item">HOME</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item--active">ABOUT ME</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">WORK</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Small paragraph about myself -->
+        <main class="case-study">
+            <h1 class="centered">Case Study for myFlix</h1>
+            <div class="intro">
+                <div class="intro-content">
+                    <h2>Overview</h2>
+                    <p>myFlix is a web application developed using the MERN stack (MongoDB, Express, React and Node.js) that is designed to act as a movie database. Users will be able to look at details for any movies in the database (such as director or genre information) and manage a list of their personal favourite movies.</p>
+
+                    <h2>Purpose and Context</h2>
+                    <p>myFlix is a project I developed as part of the CareerFoundry Full Stack Web Development curriculum. Its purpose was to get exposure to a variety of different JavaScript based technologies and to practice developing a complete web application (both frontend and backend).</p>
+
+                    <h2>Objective</h2>
+                    <p>This project had two primary objectives. First, to learn how to develop a Full Stack Web Application from start to finish while also getting familiarity with the MERN stack. Second, to develop a Web Application that I could use in my portfolio to showcase my Full Stack Development skills.</p>
+
+                    <h2>Technologies Used</h2>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>Express</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Redux</li>
+                        <li>React Bootstrap</li>
+                    </ul>
+                </div>
+                <img src="img/myflix-react.PNG" alt="Screenshot showing part of the myFlix app built with React" class="intro-image">
+            </div>
+
+            <hr>
+            <div class="components">
+                <h2>Components</h2>
+                <div class="backend">
+                    <img src="img/myflix-api.png" alt="Screenshot showing the response of an API request in Postman" class="backend-image">
+                    <div class="backend-content">
+                        <h3>Backend</h3>
+                        <p>The backend of the myFlix app was built using Node.js and Express. It is a RESTful API that interacts with a NoSQL database (MongoDB). The database holds details about both movies and users, and can be accessed via the API endpoints defined in Node.js.<br><a href="https://github.com/T-Dogg-PO/movie_api">Further documentation for the backend of myFlix, including API documentation, can be found on Github here.</a></p>
+                    </div>
+                </div>
+
+                <div class="frontend">
+                    <div class="frontend-content">
+                        <h3>Frontend</h3>
+                        <p>The fronted of the myFlix app was built using React (and later refactored with Redux). Components were defined for each page that a user would need to use, such as login/registration views, a profile view and movie detail views. Via these views, calls to the myFlix API were made via Axios to perform the necessary functions.<br><a href="https://github.com/T-Dogg-PO/myFlix-client">Further documentation for the frontend of myFlix can be found on Github here.</a><br><br><a href="https://t-dogg-myflix-react.netlify.app">A live demo of myFlix can be found here.</a></p>
+                    </div>
+                    <img src="img/myflix-react-movie.PNG" alt="Screenshot showing part of the myFlix app built with React" class="frontend-image">
+                </div>
+            </div>
+
+            <hr>
+            <div class="conclusions">
+                <h2>Challenges</h2>
+                <p>The primary challenge of the myFlix app that I encountered was the Add/Remove Favourite Movie button. I wanted this button to dynamically update its text and style depending on whether the movie in question was currently part of the users favourites or not. When I initially implemented this button in React I could not understand why it wasn't updating when it was clicked, even though the database was successfully updated. For a time, the only way I could get this feature to work was via a forced page reload, which went against the design philosophy of a Single Page Application (SPA) that I was trying to implement. It turns out that I had a fundamentally flawed understanding of how React States worked. Even though I was updating the database, I was not updating the React State correctly and it meant React didn't update the DOM. By going back to the fundamentals of React for a time, I was able to get a better understanding of React Component lifecycles and implement this functionality correctly via setState.</p>
+
+                <h2>Conclusions</h2>
+                <p>Working on the myFlix project was a great experience, both from enjoyment and learning perspectives. I was able to create a Full Stack Web Application from start to finish and implement most of the functionality I wanted to. This project has given me the experience and skills needed to start working on my own passion projects, which I have thoroughly enjoyed working on since.<br><br>In the future when I return to this project, I would like to redesign the frontend to make it look a little bit cleaner and more professional as practice for my frontend design skills. I'd also like to add different user levels (e.g. regular user vs admin), and have admins add/remove movies from the database.</p>
+            </div>
+        </main>
+
+        <!-- Links to connect on various social media accounts, same for each page across site -->
+        <footer class="page-footer">
+            <p>Connect with me on</p>
+            <div class="social-media">
+                <a href="https://github.com/T-Dogg-PO"><img src="img/github.svg" alt="Link to Thomas Tremlett's Github account"></a>
+                <a href="https://www.linkedin.com/in/thomas-tremlett"><img src="img/linkedin.svg" alt="Link to Thomas Tremlett's LinkedIn account"></a>
+                <a href="https://twitter.com/tremlett_thomas"><img src="img/twitter.svg" alt="Link to Thomas Tremlett's Twitter account"></a>
+            </div>
+        </footer>
+    </body>
+</html>

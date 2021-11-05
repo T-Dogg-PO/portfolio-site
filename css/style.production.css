@@ -539,3 +539,30 @@ button:focus,
 .water {
     fill: #00bfff;
 }
+
+.case-study {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.backend, .frontend, .intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.backend-image, .frontend-image, .intro-image {
+    float: left;
+    max-width: 100%;
+    max-height: 500px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+
+.backend-image {
+    margin-bottom: 100px;
+}
+
+.backend-content, .frontend-content, .intro-content {
+    display: flex;
+    flex-direction: column;
+}

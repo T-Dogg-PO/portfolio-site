@@ -458,3 +458,8 @@ button:focus,
 .water {
     fill: var(--water-color);
 }
+
+.case-study {
+    max-width: 1500px;
+    margin: 0 auto;
+}
