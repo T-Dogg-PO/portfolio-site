@@ -69,14 +69,15 @@
                     <img src="img/myflix-api.png" alt="Screenshot showing the response of an API request in Postman" class="backend-image">
                     <div class="backend-content">
                         <h3>Backend</h3>
-                        <p>The backend of the myFlix app was built using Node.js and Express. It is a RESTful API that interacts with a NoSQL database (MongoDB). The database holds details about both movies and users, and can be accessed via the API endpoints defined in Node.js.<br><a href="https://github.com/T-Dogg-PO/movie_api">Further documentation for the backend of myFlix, including API documentation, can be found on Github here.</a></p>
+                        <p>The backend of the myFlix app was built primarily using Node.js and Express. It is a RESTful API that interacts with a NoSQL database (MongoDB).<br><br>
+                            I first set up the server routes and all the API endpoints using Node.js and Express. Then I set up the MongoDB database to store information on both movies and users, including database models defined using Mongoose. The backend was finished with some security features, including JWT authentication using Passport.<br><br><a href="https://github.com/T-Dogg-PO/movie_api">Further documentation for the backend of myFlix, including API documentation, can be found on Github here.</a></p>
                     </div>
                 </div>
 
                 <div class="frontend">
                     <div class="frontend-content">
                         <h3>Frontend</h3>
-                        <p>The fronted of the myFlix app was built using React (and later refactored with Redux). Components were defined for each page that a user would need to use, such as login/registration views, a profile view and movie detail views. Via these views, calls to the myFlix API were made via Axios to perform the necessary functions.<br><a href="https://github.com/T-Dogg-PO/myFlix-client">Further documentation for the frontend of myFlix can be found on Github here.</a><br><br><a href="https://t-dogg-myflix-react.netlify.app">A live demo of myFlix can be found here.</a></p>
+                        <p>The fronted of the myFlix app was built using React (and later refactored with Redux). I took special care to make sure that myFlix met the requirements of a single-page application.<br><br>First the applications structure and components were planned out. Following that initial planning stage, the individual components were implemented using a combination of class components and functional components. Any API calls that needed to be made in a component (for example, registering a user, logging in a user or retrieving a list of movies) was made using Axios. React Bootstrap was used for styling purposes. React Router was used to navigate between different views. Finally, the frontend for myFlix was refactored to use Redux to better manage the applications state.<br><br><a href="https://github.com/T-Dogg-PO/myFlix-client">Further documentation for the frontend of myFlix can be found on Github here.</a><br><br><a href="https://t-dogg-myflix-react.netlify.app">A live demo of myFlix can be found here.</a></p>
                     </div>
                     <img src="img/myflix-react-movie.PNG" alt="Screenshot showing part of the myFlix app built with React" class="frontend-image">
                 </div>
