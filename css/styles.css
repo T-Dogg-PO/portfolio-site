@@ -48,6 +48,7 @@ From lighter to darker colours:
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 /* Define the font sizes and line heights for default text elements (at least the ones in use at the moment) */

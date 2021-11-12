@@ -39,6 +39,7 @@ From lighter to darker colours:
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 /* Define the font sizes and line heights for default text elements (at least the ones in use at the moment) */
@@ -60,6 +61,7 @@ body {
     background-color: white;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 /* Each item in the heading (logo + navigation links) has base width of 200px, is able to shrink but not able to grow */
